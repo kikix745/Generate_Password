@@ -1,6 +1,6 @@
 
 import random
-
+import secrets
 items = [
     "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
     "a", "s", "d", "f", "g", "h", "j", "k", "l",
@@ -12,7 +12,9 @@ items = [
 limit=int(input("enter your password length "))
 password=""
 for i in range(limit):
-    caracter=random.choice(items) 
+    #caracter=random.choice(items) 
+    caracter=secrets.choice(items) 
+
     password=password+caracter
 
 print("-------------------------")    
